@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+nav {
+    width: 100%;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+
+    font-family: "Vend Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 500px;
+    gap: 2rem;
+    width: auto;
+}
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links li a:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #ffffff;
+}
+/*logo store*/
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* TEXT LOGO */
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+/* WATCH ICON */
+nav i {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    margin-top: 2px;
+    transition: 0.3s;
+}
+/*end */
+
+#myvidio {
+    position: fixed; /* fixed instead of relative to prevent it adding height */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* keeps video proportions */
+    z-index: -1;
+}
+.contactus {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.contactus h2 {
+    font-size: 50px;
+    margin: 0;
+    color: rgb(31, 29, 29);
+}
+.contactus h2:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #ffffff;
+}
+.contactus h3{
+    color: black;
+}
+/* =========================
+   1) Large tablets / small desktops
+========================= */
+@media (max-width: 992px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    margin-right: 0;
+    gap: 1.2rem;
+  }
+
+  .contactus {
+    margin-top: 30px;
+    padding: 120px 20px 60px 20px;
+    height: auto; /* content grows naturally */
+  }
+
+  .contactus h2 {
+    margin-top: 25px;
+    font-size: 40px;
+  }
+
+  .contactus h3 {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   2) Tablets / medium screens
+========================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links {
+    margin-right: 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contactus {
+    margin-top: 30px;
+    padding: 100px 15px 50px 15px;
+  }
+
+  .contactus h2 {
+    margin-top: 25px;
+    font-size: 35px;
+  }
+
+  .contactus h3 {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   3) Small phones
+========================= */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contactus {
+    margin-top: 30px;
+    padding: 80px 10px 40px 10px;
+  }
+
+  .contactus h2 {
+    margin-top: 25px;
+    font-size: 28px;
+  }
+
+  .contactus h3 {
+    font-size: 14px;
+  }
+}
