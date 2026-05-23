@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuerza Store</title>
+    <link rel="stylesheet" href="page.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@300..700&display=swap" rel="stylesheet">
+    <!--end-->
+
+    <!--icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--end-->
+
+    <!--script 3d-->
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!--end-->
+</head>
+<body>
+     <header>
+    <nav>
+        <div class="logo-box">
+            <i class='bx bxs-watch'></i>
+        <a class="logo">Fuerza Store</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+       </nav>
+        </header>
+        <div>
+    <video autoplay muted loop id="myvidio">
+        <source src="images/BACKGROUND.mp4">
+    </video>
+    <div class="watch3d">
+         <model-viewer src="images/rolex 3d.glb"
+        shadow-intensity="1"
+        camera-controls ar>
+      </model-viewer>
+    </div>
+    <div class="firstpage">
+        <h2>Fuerza Store Elegance on Your Wrist</h2>
+        <h3>Premium watches crafted for style, precision, and power.</h3>
+    </div>
+    <!--buttons-->
+    <!-- From Uiverse.io by adamgiebl --> 
+     <div class="btns">
+     <a href="products.html"><button> ShopNow</button></a>
+    </div>
+   <!--end-->
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+nav {
+    width: 100%;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+
+    font-family: "Vend Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 500px;
+    gap: 2rem;
+    width: auto;
+}
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links li a:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #ffffff;
+}
+/*logo store*/
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* TEXT LOGO */
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+/* WATCH ICON */
+nav i {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    margin-top: 2px;
+    transition: 0.3s;
+}
+/*end */
+
+#myvidio {
+    position: fixed; /* fixed instead of relative to prevent it adding height */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* keeps video proportions */
+    z-index: -1;
+}
+
+.firstpage h2 {
+     display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 30px;
+    top:100px;
+    left: 50px;
+    color: rgb(255, 255, 255);
+    z-index: 1; 
+    text-shadow: 1px 1px 1px black;
+}
+.firstpage h3 {
+     display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 30px;
+    top:150px;
+    left: 50px;
+    color: rgb(255, 255, 255);
+    z-index: 1; 
+    text-shadow: 1px 1px 1px black;
+}
+/*buttons */
+/* From Uiverse.io by adamgiebl */ 
+button {
+  position: absolute;
+  display: inline-block;
+  top: 240px;
+  left: 45px;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000000;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #000000;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: inset 0 -100px 0 0 #000000;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+/* end */
+
+/*3d */
+.watch3d {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 950px;
+    overflow: hidden;
+}
+.watch3d model-viewer {
+  width: 400px;  
+  height: 400px;  
+}
+/*end*/
+
+/* media */
+/* ===========================
+   1) الشاشات الكبيرة (لابتوب)
+=========================== */
+@media (max-width: 1400px) {
+  .watch3d {
+    left: 750px;
+  }
+  .watch3d model-viewer {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* ===========================
+   2) الشاشات المتوسطة (تابلت)
+=========================== */
+@media (max-width: 992px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    margin-right: 0;
+    gap: 1.2rem;
+  }
+
+  .watch3d {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+  }
+
+  .watch3d model-viewer {
+    width: 300px;
+    height: 300px;
+  }
+
+  .firstpage h2 {
+    font-size: 24px;
+    top: 120px;
+    left: 20px;
+  }
+  
+  .firstpage h3 {
+    font-size: 20px;
+    top: 165px;
+    left: 20px;
+  }
+
+  button {
+    top: 220px;
+    left: 20px;
+  }
+}
+
+/* ===========================
+   3) phones
+=========================== */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links {
+    margin-right: 0;
+    gap: 1rem;
+  }
+
+  /* النص */
+  .firstpage h2 {
+    font-size: 22px;
+    top: 140px;
+    left: 20px;
+  }
+
+  .firstpage h3 {
+    font-size: 18px;
+    top: 180px;
+    left: 20px;
+  }
+
+  /* زر */
+  button {
+    top: 230px;
+    left: 20px;
+    padding: 12px 24px;
+  }
+
+  /* 3D model */
+  .watch3d {
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .watch3d model-viewer {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* ===========================
+   4) small phones
+=========================== */
+@media (max-width: 480px) {
+  .firstpage h2 {
+    font-size: 18px;
+  }
+
+  .firstpage h3 {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .watch3d model-viewer {
+    width: 220px;
+    height: 220px;
+  }
+}
